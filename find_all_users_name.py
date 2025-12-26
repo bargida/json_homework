@@ -11,9 +11,9 @@ def find_all_users_name(data: dict)->list:
     """
     messages = data['messages']
     user_name = set()
-    for name in messages:
-        if 'from' in name:
-            user_name.add(name['from'])
+    for message in messages:
+        if 'from' in message:
+            user_name.add(message['from'])
     return user_name
             
         

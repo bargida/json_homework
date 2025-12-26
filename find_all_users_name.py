@@ -12,7 +12,7 @@ def find_all_users_name(data: dict)->list:
     messages = data['messages']
     user_name = set()
     for name in messages:
-        if 'from' in name.keys():
+        if 'from' in name:
             user_name.add(name['from'])
     return user_name
             
